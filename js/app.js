@@ -6,6 +6,7 @@ function takeInput()
     //console.log(name);
     alert('Hello ' + name + '!');
     alert('Let\'s start with the questions.');
+    alert('You can enter yes/no or y/n');
     let q1 = prompt('Do you think that i like a perrots?').toLowerCase();
     //console.log(q1);
     //Q1
@@ -14,9 +15,11 @@ function takeInput()
         switch(q1)
         {
             case 'yes':
+            case 'y':
                 alert('correct');
                 break;
             case 'no':
+            case 'n':
                 alert('Wrong');
                 break;
             default:
@@ -31,9 +34,11 @@ function takeInput()
         switch(q2)
         {
             case 'yes':
+            case 'y':
                 alert('correct');
                 break;
             case 'no':
+            case 'n':
                 alert('Wrong');
                 break;
             default:
@@ -49,9 +54,11 @@ function takeInput()
         switch(q3)
         {
             case 'yes':
+            case 'y':
                 alert('correct');
                 break;
             case 'no':
+            case 'n':
                 alert('Wrong');
                 break;
             default:
@@ -67,9 +74,11 @@ function takeInput()
         switch(q4)
         {
             case 'yes':
+            case 'y':
                 alert('Wrong');
                 break;
             case 'no':
+            case 'n':
                 alert('correct');
                 break;
             default:
@@ -86,9 +95,11 @@ function takeInput()
         switch(q5)
         {
             case 'yes':
+            case 'y':
                 alert('Wrong');
                 break;
             case 'no':
+            case 'n':
                 alert('correct');
                 break;
             default:
