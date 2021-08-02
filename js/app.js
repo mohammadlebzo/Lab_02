@@ -2,6 +2,7 @@
 
 function takeInput()
 {
+    let corrCounter = 0;
     let name =prompt('Please Enter Your Name:').toUpperCase();
     //console.log(name);
     alert('Hello ' + name + '!');
@@ -17,6 +18,7 @@ function takeInput()
             case 'yes':
             case 'y':
                 alert('correct');
+                corrCounter++;
                 break;
             case 'no':
             case 'n':
@@ -36,6 +38,7 @@ function takeInput()
             case 'yes':
             case 'y':
                 alert('correct');
+                corrCounter++;
                 break;
             case 'no':
             case 'n':
@@ -56,6 +59,7 @@ function takeInput()
             case 'yes':
             case 'y':
                 alert('correct');
+                corrCounter++;
                 break;
             case 'no':
             case 'n':
@@ -80,6 +84,7 @@ function takeInput()
             case 'no':
             case 'n':
                 alert('correct');
+                corrCounter++;
                 break;
             default:
                 alert('Please Enter Y/N Only.')
@@ -101,38 +106,12 @@ function takeInput()
             case 'no':
             case 'n':
                 alert('correct');
+                corrCounter++;
                 break;
             default:
                 alert('Please Enter Y/N Only.')
         }
     }
-    alert('Thank you for playing ' + name + "!");
+    alert('Thank you for playing ' + name + "! \nYour score: " + corrCounter);
 
-    /*
-    if(q1 == 'no' && q2 == 'no' && q3 == 'no' && q4 == 'yes' && q5 == 'yes')
-    {
-        alert('You have scored 0 point')
-    }
-    else if(q1 == 'yes' && q2 == 'no' && q3 == 'no' && q4 == 'yes' && q5 == 'yes')
-    {
-        alert('You have scored 1 point')
-    }
-    else if(q1 == 'yes' && q2 == 'yes' && q3 == 'no' && q4 == 'no' && q5 == 'no')
-    {
-        alert('You have scored 2 point')
-    }
-    else if(q1 == 'yes' && q2 == 'yes' && q3 == 'yes' && q4 == 'no' && q5 == 'no')
-    {
-        alert('You have scored 3 point')
-    }
-    else if(q1 == 'yes' && q2 == 'yes' && q3 == 'yes' && q4 == 'yes' && q5 == 'no')
-    {
-        alert('You have scored 4 point')
-    }
-    else if(q1 == 'yes' && q2 == 'yes' && q3 == 'yes' && q4 == 'yes' && q5 == 'yes')
-    {
-        alert('You have scored 5 point')
-    }
-    else
-    */
 }
