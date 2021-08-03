@@ -48,7 +48,7 @@ ol{
 ol li{
     position: relative;
     left: 30px;
-    padding-top: 3px;
+    padding-top: 10px;
     
 }
 
@@ -92,10 +92,10 @@ main div button
 {
     background-color: rgb(100, 0, 100);
     border: 2px solid gold;
-    margin-left: 45%;
+    margin-left: 40%;
     margin-top: 50px;
     position: relative;
-    width: 90%;
+    width: 100%;
     
     
 }
