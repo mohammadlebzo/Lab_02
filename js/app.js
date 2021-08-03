@@ -133,10 +133,22 @@ function takeInput()
             }
             else if(count == 3)
             {
-                alert('Wrong, the answer is 6');
+                alert('Sorry, the right answer was 6');
                 break;
             }
-            alert('Wrong, you have ' + --wroCount + ' more times to try.');
+            else if(q6 <= 4)
+            {
+                alert('Too low, try again.')
+            }
+            else if(q6 >=8)
+            {
+                alert('Too high, try again.')
+            }
+            else if(q6 == 5 || q6 ==7)
+            {
+                alert('YOUR TOO CLOSE, try again.')
+            }
+            alert('You have ' + --wroCount + ' more tries.');
             q6 = prompt('How many perrots do you think i have?');
             count++;
             
@@ -186,10 +198,10 @@ function takeInput()
             }
             else if(count == 5)
             {
-                alert('Wrong, the answers are ' + answers[0] + ' ' + answers[1] + ' ' + answers[2]);
+                alert('Sorry, the right answers were ' + answers[0] + ' ' + answers[1] + ' ' + answers[2]);
                 break;
             }
-            alert('Wrong, you have ' + --wroCount + ' more times to try.');
+            alert('Wrong, you have ' + --wroCount + ' more tries.');
             q7 = prompt('To create an unorderd list in markdown you need to add a ____ sign in front of the line.');
             count++;
         }
