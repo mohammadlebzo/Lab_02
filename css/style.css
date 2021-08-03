@@ -1,5 +1,5 @@
 header{
-    background-color: purple;
+    background-color: rgb(100, 0, 100);
     
     color: gold;
 }
@@ -17,10 +17,8 @@ main p{
     text-align: center;
 }
 footer{
-    background-color: purple;
-    
+    background-color: rgb(100, 0, 100);
     color: gold;
-    position:absolute;
     bottom:0;
     width:100%;
     height:60px;   /* Height of the footer */
@@ -54,9 +52,75 @@ ol li{
     
 }
 
-.center{
+main div button
+{
+    font-size: 20px;
+    height: 40px;
+    width: 250px;
+    margin-left: 0px;
+}
+
+/* img
+{
+    max-height: 25em;
+    min-height: 25em;
+} */
+
+.center
+{
     text-align: center;
 }
+
+
+.column
+{
+    float: left;
+    width: 20%;
+    padding: 5px;
+}
+  
+  
+.row::after
+{
+    margin-bottom: 50px;
+    
+    content: "";
+    display: table;
+    clear: both;
+}
+.container 
+{
+    background-color: rgb(100, 0, 100);
+    border: 2px solid gold;
+    margin-left: 45%;
+    margin-top: 50px;
+    position: relative;
+    width: 90%;
+    
+    
+}
+.container p
+{
+    font-size: 10px;
+}
+
+/* #hide{
+    display: block;
+} */
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .container:hover .image {
+    opacity: 0.3;
+  }
+
 
 
 /* Button Animation Stuff */
@@ -64,13 +128,11 @@ button
     {
         background:rgb(128, 5, 128); 
         color: gold;
-        height: 40px;
-        width: 250px;
-        font-size: 20px;
         font-family: "MV Boli";
         border: 4px solid gold;
         margin-top: 50px;
         margin-bottom: 50px;
+        margin-left: 50px;
         transition: all 0.5s;
         cursor: pointer;
 
