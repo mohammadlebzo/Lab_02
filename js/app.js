@@ -123,7 +123,7 @@ function takeInput()
     {
         let wroCount = 4;
         let count = 0;
-        for(let i = 0; i < 3; i++)
+        for(let i = 0; i < 4; i++)
         {
             if(q6 == 6)
             {
@@ -131,14 +131,15 @@ function takeInput()
                  corrCounter++;
                  break;
             }
+            else if(count == 3)
+            {
+                alert('Wrong, the answer is 6');
+                break;
+            }
             alert('Wrong, you have ' + --wroCount + ' more times to try.');
             q6 = prompt('How many perrots do you think i have?');
             count++;
-           
-        }
-        if(count == 3)
-        {
-            alert('Wrong, the answer is 6');
+            
         }
     }
 
@@ -163,7 +164,7 @@ function takeInput()
     {
         let wroCount = 6;
         let count = 0;
-        for(let i = 0; i < 5; i++)
+        for(let i = 0; i < 6; i++)
         {
             if(q7 == answers[0])
             {
@@ -183,13 +184,14 @@ function takeInput()
                 corrCounter++;
                 break;
             }
+            else if(count == 5)
+            {
+                alert('Wrong, the answers are ' + answers[0] + ' ' + answers[1] + ' ' + answers[2]);
+                break;
+            }
             alert('Wrong, you have ' + --wroCount + ' more times to try.');
             q7 = prompt('To create an unorderd list in markdown you need to add a ____ sign in front of the line.');
             count++;
-        }
-        if(count == 5)
-        {
-            alert('Wrong, the answers are ' + answers[0] + ' ' + answers[1] + ' ' + answers[2]);
         }
     }
 
