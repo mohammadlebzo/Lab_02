@@ -28,7 +28,7 @@ function takeInput()
                 alert('Please Enter Y/N Only.')
         }
     }
-    let q2 = prompt('Do you think that i have a perrots?').toLowerCase();
+    let q2 = prompt('Do you think that i have a perrot?').toLowerCase();
     //console.log(q2);
     //Q2
     if(q2 != null)
@@ -112,6 +112,87 @@ function takeInput()
                 alert('Please Enter Y/N Only.')
         }
     }
+
+    let q6 = prompt('How many perrots do you think i have?');
+    if(q6 == 6)
+    {
+        alert('correct');
+        corrCounter++;
+    }
+    else
+    {
+        let wroCount = 4;
+        let count = 0;
+        for(let i = 0; i < 3; i++)
+        {
+            if(q6 == 6)
+            {
+                 alert('correct');
+                 corrCounter++;
+                 break;
+            }
+            alert('Wrong, you have ' + --wroCount + ' more times to try.');
+            q6 = prompt('How many perrots do you think i have?');
+            count++;
+           
+        }
+        if(count == 3)
+        {
+            alert('Wrong, the answer is 6');
+        }
+    }
+
+    let q7 = prompt('To create an unorderd list in markdown you need to add a ____ sign in front of the line.');
+    let answers = ['-', '+', '*'];
+    if(q7 == answers[0])
+    {
+        alert('correct');
+        corrCounter++;
+    }
+    else if(q7 == answers[1])
+    {
+        alert('correct');
+        corrCounter++;
+    }
+    else if(q7 == answers[2])
+    {
+        alert('correct');
+        corrCounter++;
+    }
+    else
+    {
+        let wroCount = 6;
+        let count = 0;
+        for(let i = 0; i < 5; i++)
+        {
+            if(q7 == answers[0])
+            {
+                 alert('correct');
+                 corrCounter++;
+                 break;
+            }
+            else if(q7 == answers[1])
+            {
+                alert('correct');
+                corrCounter++;
+                break;
+            }
+            else if(q7 == answers[2])
+            {
+                alert('correct');
+                corrCounter++;
+                break;
+            }
+            alert('Wrong, you have ' + --wroCount + ' more times to try.');
+            q7 = prompt('To create an unorderd list in markdown you need to add a ____ sign in front of the line.');
+            count++;
+        }
+        if(count == 5)
+        {
+            alert('Wrong, the answers are ' + answers[0] + ' ' + answers[1] + ' ' + answers[2]);
+        }
+    }
+
     alert('Thank you for playing ' + name + "! \nYour score: " + corrCounter);
 
 }
