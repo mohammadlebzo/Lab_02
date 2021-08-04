@@ -8,7 +8,7 @@ function takeInput()
     alert('Hello ' + name + '!');
     alert('Let\'s start with the questions.');
     alert('You can enter yes/no or y/n');
-    let q1 = prompt('Do you think that i like a perrots?').toLowerCase();
+    let q1 = prompt('Do you think that i like perrots?').toLowerCase();
     answerYes(q1);
 
     let q2 = prompt('Do you think that i have a perrot?').toLowerCase();
