@@ -1,103 +1,66 @@
 'use strict'
-
+let corrCounter = 0;
 function takeInput()
 {
-    let corrCounter = 0;
+    
     let name =prompt('Please Enter Your Name:').toUpperCase();
     //console.log(name);
     alert('Hello ' + name + '!');
     alert('Let\'s start with the questions.');
     alert('You can enter yes/no or y/n');
     let q1 = prompt('Do you think that i like a perrots?').toLowerCase();
-    //console.log(q1);
-    //Q1
-    if(q1 != null)
-    {
-        switch(q1)
-        {
-            case 'yes':
-            case 'y':
-                alert('correct');
-                corrCounter++;
-                break;
-            case 'no':
-            case 'n':
-                alert('Wrong');
-                break;
-            default:
-                alert('Please Enter Y/N Only.')
-        }
-    }
+    answerYes(q1);
+
     let q2 = prompt('Do you think that i have a perrot?').toLowerCase();
-    //console.log(q2);
-    //Q2
-    if(q2 != null)
-    {
-        switch(q2)
-        {
-            case 'yes':
-            case 'y':
-                alert('correct');
-                corrCounter++;
-                break;
-            case 'no':
-            case 'n':
-                alert('Wrong');
-                break;
-            default:
-                alert('Please Enter Y/N Only.')
-        }
-    }
+    answerYes(q2);
 
     let q3 = prompt('I know some programming languages, but do you think i know how to write Python code?').toLowerCase();
-    //console.log(q3);
-    //Q3
-    if(q3 != null)
-    {
-        switch(q3)
-        {
-            case 'yes':
-            case 'y':
-                alert('correct');
-                corrCounter++;
-                break;
-            case 'no':
-            case 'n':
-                alert('Wrong');
-                break;
-            default:
-                alert('Please Enter Y/N Only.')
-        }
-    }
+    answerYes(q3);
 
     let q4 = prompt('Do you think i use social media').toLowerCase();
-    //console.log(q4);
-    //Q4
-    if(q4 != null)
-    {
-        switch(q4)
-        {
-            case 'yes':
-            case 'y':
-                alert('Wrong');
-                break;
-            case 'no':
-            case 'n':
-                alert('correct');
-                corrCounter++;
-                break;
-            default:
-                alert('Please Enter Y/N Only.')
-        }
-    }
+    answerNo(q4);
     
     let q5 = prompt('Do you think that i use a Mac operating system ').toLowerCase();
-    //console.log(q5);
-    
-    //Q5
-    if(q5 != null)
+    answerNo(q5);
+
+    let q6 = Number (prompt('How many perrots do you think i have?'));
+    takeInputQ6(q6);
+
+    let q7 = prompt('To create an unorderd list in markdown you need to add a ____ sign in front of the line.');
+    takeInputQ7(q7);
+
+    alert('Thank you for playing ' + name + "! \nYour score: " + corrCounter);
+
+}
+
+function answerYes(q)
+{
+    //console.log(q);
+    if(q != null)
     {
-        switch(q5)
+        switch(q)
+        {
+            case 'yes':
+            case 'y':
+                alert('correct');
+                corrCounter++;
+                break;
+            case 'no':
+            case 'n':
+                alert('Wrong');
+                break;
+            default:
+                alert('Please Enter Y/N Only.')
+        }
+    }
+}
+
+function answerNo(q)
+{
+    //console.log(q);
+    if(q != null)
+    {
+        switch(q)
         {
             case 'yes':
             case 'y':
@@ -112,9 +75,10 @@ function takeInput()
                 alert('Please Enter Y/N Only.')
         }
     }
-
-    let q6 = Number (prompt('How many perrots do you think i have?'));
-    if(q6 == 6)
+}
+function takeInputQ6(q)
+{
+    if(q == 6)
     {
         alert('correct');
         corrCounter++;
@@ -125,7 +89,7 @@ function takeInput()
         let count = 0;
         for(let i = 0; i < 4; i++)
         {
-            if(q6 == 6)
+            if(q == 6)
             {
                  alert('correct');
                  corrCounter++;
@@ -136,38 +100,39 @@ function takeInput()
                 alert('Sorry, the right answer was 6');
                 break;
             }
-            else if(q6 <= 4)
+            else if(q <= 4)
             {
                 alert('Too low, try again.')
             }
-            else if(q6 >=8)
+            else if(q >=8)
             {
                 alert('Too high, try again.')
             }
-            else if(q6 == 5 || q6 ==7)
+            else if(q == 5 || q6 ==7)
             {
                 alert('YOUR TOO CLOSE, try again.')
             }
             alert('You have ' + --wroCount + ' more tries.');
-            q6 = prompt('How many perrots do you think i have?');
+            q = prompt('How many perrots do you think i have?');
             count++;
             
         }
     }
-
-    let q7 = prompt('To create an unorderd list in markdown you need to add a ____ sign in front of the line.');
+}
+function takeInputQ7(q)
+{
     let answers = ['-', '+', '*'];
-    if(q7 == answers[0])
+    if(q == answers[0])
     {
         alert('correct');
         corrCounter++;
     }
-    else if(q7 == answers[1])
+    else if(q == answers[1])
     {
         alert('correct');
         corrCounter++;
     }
-    else if(q7 == answers[2])
+    else if(q == answers[2])
     {
         alert('correct');
         corrCounter++;
@@ -178,19 +143,19 @@ function takeInput()
         let count = 0;
         for(let i = 0; i < 6; i++)
         {
-            if(q7 == answers[0])
+            if(q == answers[0])
             {
                  alert('correct');
                  corrCounter++;
                  break;
             }
-            else if(q7 == answers[1])
+            else if(q == answers[1])
             {
                 alert('correct');
                 corrCounter++;
                 break;
             }
-            else if(q7 == answers[2])
+            else if(q == answers[2])
             {
                 alert('correct');
                 corrCounter++;
@@ -202,11 +167,9 @@ function takeInput()
                 break;
             }
             alert('Wrong, you have ' + --wroCount + ' more tries.');
-            q7 = prompt('To create an unorderd list in markdown you need to add a ____ sign in front of the line.');
+            q = prompt('To create an unorderd list in markdown you need to add a ____ sign in front of the line.');
             count++;
         }
     }
-
-    alert('Thank you for playing ' + name + "! \nYour score: " + corrCounter);
 
 }
