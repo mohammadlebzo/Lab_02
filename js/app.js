@@ -113,7 +113,7 @@ function takeInput()
         }
     }
 
-    let q6 = prompt('How many perrots do you think i have?');
+    let q6 = Number (prompt('How many perrots do you think i have?'));
     if(q6 == 6)
     {
         alert('correct');
